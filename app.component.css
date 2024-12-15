@@ -1,0 +1,175 @@
+.navbar-nav{
+    margin-right: 70px;
+}
+.navbar{
+    height: 100px;
+    border-bottom: 2px solid #3977b8;
+    background: #1f61a7;
+}
+.nav-item{
+    margin-left: 50px;
+    position: relative;
+}
+.nav-item1{
+    margin-left: 50px;
+
+}
+.navbar-brand{
+    margin-left: 60px;
+}
+.submenu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 230px;
+    background: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-top: 4px solid #104e90;
+    transform: scale(0.7);
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-out 0s;
+    z-index: 400;
+    font-size: 13px;
+  }
+  
+ 
+  .nav-item:hover .submenu {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  .list-unstyled {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    width: 164px;
+  }
+  
+  .submenu-link {
+    color: #000; 
+    text-decoration: none; 
+    display: block;
+    font-weight: bold;
+    padding: 5px 10px;
+  }
+  .submenu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 0; 
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease-out, transform 0.3s ease-out; 
+  }
+  
+  .submenu-link:hover::after {
+    width: 18%;
+    color: #464646;
+    
+    transform: translateX(100%); 
+  }
+  .submenu-link-2::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 0; 
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease-out, transform 0.3s ease-out; 
+  }
+  .submenu-link-2 {
+    color: #000; 
+    text-decoration: none; 
+    display: block;
+    font-weight: bold;
+    padding: 5px 10px;
+  }
+  .submenu-link-2:hover::after {
+    width: 36%;
+    
+    transform: translateX(100%); 
+  }
+  .submenu li {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+
+
+
+  @media (max-width: 786px) {
+    /* Make the navbar items vertical and close by default */
+    .navbar-nav {
+      flex-direction: column;
+    }
+  
+    /* Hide dropdowns in the main navbar */
+    .submenu {
+      display: none;
+    }
+  
+    /* Toggle the submenu for the services and coverage items */
+    .nav-item.dropdown .submenu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 100%;
+      background-color: #343a40; /* Dark background color */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1050;
+    }
+  
+    .nav-item.dropdown:hover .submenu {
+      display: block;
+    }
+  
+    /* Customize the submenu links */
+    .submenu-link,
+    .submenu-link-2 {
+      padding: 10px 15px;
+      color: #fff;
+      text-decoration: none;
+      display: block;
+    }
+  
+    .submenu-link:hover,
+    .submenu-link-2:hover {
+      background-color: #495057; /* Darker background on hover */
+    }
+  
+    /* Navbar toggle button for offcanvas */
+    .navbar-toggler {
+      display: block;
+      background-color: #343a40;
+      border: none;
+    }
+  
+    /* Offcanvas container */
+    .offcanvas {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #343a40;
+      padding-top: 60px;
+      z-index: 1050;
+    }
+  
+    .offcanvas-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 15px;
+    }
+  
+    .offcanvas-body {
+      padding: 0;
+    }
+  }
+  
